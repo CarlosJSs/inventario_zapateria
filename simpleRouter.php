@@ -22,7 +22,7 @@
       $requestMethod = $_SERVER['REQUEST_METHOD'];
       $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
   
-      $requestUri = str_replace('/inventario_zapateria/src/index.php', '', $requestUri);
+      $requestUri = str_replace('/inventario_zapateria/index.php', '', $requestUri);
   
       foreach ($this->routes[$requestMethod] as $path => $callback) {
         if ($requestUri == $path) {
