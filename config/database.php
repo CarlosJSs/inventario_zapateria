@@ -1,4 +1,5 @@
 <?php
+  /*
   class Database {
     private $host = 'localhost:8889';
     private $db_name = 'inventario_zapateria';
@@ -17,5 +18,19 @@
       }
       return $this->conn;
     }
+  }
+  */
+?>
+
+<?php
+  $servidor = 'localhost:8889';
+  $usuario = 'root';
+  $password = 'root';
+  $bd = 'inventario_zapateria';
+
+  // Conectar a la Base de Datos
+  $conexion = new mysqli($servidor, $usuario, $password, $bd);
+  if($conexion->connect_error){
+    die('Conexion fallida '.$conexion->connect_error);
   }
 ?>
