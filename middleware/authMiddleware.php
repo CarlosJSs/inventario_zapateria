@@ -1,5 +1,4 @@
 <?php
-  require_once BASE_PATH . '/services/tokenService.php';
 
   class AuthMiddleware {
     public static function verificarToken() {
