@@ -4,15 +4,10 @@
 
   // cuando detecte el metodo post
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    
-    $_SESSION['usuario'] = $usuario;
-    header('Location: layout.php');
-
-    /*
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
 
-    $busca = 'SELECT * FROM admin WHERE usuario = ?';
+    $busca = 'SELECT * FROM admin WHERE adm_usuario = ?';
     $prep = $conexion->prepare($busca);
     $prep->bind_param('s', $usuario);
     $prep->execute();
@@ -20,7 +15,7 @@
 
     if($admin->num_rows > 0){
       $dato = $admin->fetch_assoc();
-      if($password == $dato['password']){ //usar el password_verify cuando este encryptada
+      if(password_verify($password, $dato['adm_contra'])){ //usar el password_verify cuando este encryptada
         $_SESSION['usuario'] = $usuario;
         header('Location: layout.php');
         exit();
@@ -30,7 +25,6 @@
     }else{
       $error = 'Administrador no encontrado';
     }
-    */
     
   }
 ?>

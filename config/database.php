@@ -23,6 +23,7 @@
 ?>
 
 <?php
+
   $servidor = 'localhost:8889';
   $usuario = 'root';
   $password = 'root';
@@ -33,4 +34,5 @@
   if($conexion->connect_error){
     die('Conexion fallida '.$conexion->connect_error);
   }
+
 ?>
