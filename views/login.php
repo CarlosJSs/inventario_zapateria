@@ -15,7 +15,8 @@
 
     if($admin->num_rows > 0){
       $dato = $admin->fetch_assoc();
-      if(password_verify($password, $dato['adm_contra'])){ //usar el password_verify cuando este encryptada
+      if($password == $dato['adm_contra']){
+      //if(password_verify($password, $dato['adm_contra'])){ //usar el password_verify cuando este encryptada
         $_SESSION['usuario'] = $usuario;
         header('Location: layout.php');
         exit();
