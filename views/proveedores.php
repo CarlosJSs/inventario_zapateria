@@ -56,7 +56,7 @@ if (!$result) {
             <div class="col-md-5">
                 <div class="card mb-4">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Agregar Nuevo Proveedor</h5>
+                        <h5 class="mb-0">Agrega Nuevo Proveedor</h5>
                     </div>
                     <div class="card-body">
                         <form action="proveedores.php" method="post">
@@ -78,7 +78,7 @@ if (!$result) {
                 </div>
             </div>
 
-            <!-- Mostrar los proveedores existentes -->
+            <!-- Mostrar  proveedores existentes -->
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-header bg-secondary text-white">
