@@ -32,7 +32,7 @@
   // Conectar a la Base de Datos
   $conexion = new mysqli($servidor, $usuario, $password, $bd);
   if($conexion->connect_error){
-    die('Conexion fallida '.$conexion->connect_error);
+    die('Conexion fallo '.$conexion->connect_error);
   }
 
 ?>
