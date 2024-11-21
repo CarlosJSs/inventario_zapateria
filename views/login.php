@@ -3,7 +3,7 @@
   include '../config/database.php';
 
   // cuando detecte el metodo post
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+  if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
 
@@ -18,6 +18,7 @@
       if($password === $dato['adm_contra']){
       //if(password_verify($password, $dato['adm_contra'])){ //usar el password_verify cuando este encryptada
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['user_name'] = $dato['adm_nombre'];
         header('Location: layout.php');
         exit();
       }else{
