@@ -50,11 +50,11 @@ $result = $conexion->query($selectQuery);
         <h1 class="text-center mb-4">Gestión de Categorías</h1>
 
         <div class="row">
-            <!-- Formulario para agregar una nueva categoría -->
+            <!-- Formulario para agregar nueva categoría -->
             <div class="col-md-5">
                 <div class="card mb-4">
                     <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Agregar Nueva Categoría</h5>
+                        <h5 class="mb-0">Agrega Nueva Categoría</h5>
                     </div>
                     <div class="card-body">
                         <form action="categorias.php" method="post">
