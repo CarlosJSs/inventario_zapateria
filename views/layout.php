@@ -20,7 +20,7 @@
     <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="https://demos.creative-tim.com/argon-dashboard-pro/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ae67df2373.js" crossorigin="anonymous"></script>
     <!-- Estilos -->
     <link rel="stylesheet" href="../public/css/layout.css">
 </head>
@@ -31,8 +31,8 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="">
-        <img src="https://static.thenounproject.com/png/4595376-200.png" width="26px" height="26px" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">Titulo Proyecto</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/860/860895.png" width="26px" height="26px" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold">Archive Shoes :)</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -123,9 +123,9 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Bienvenido a (titulo del proyecto)</li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Bienvenido:</li>
           </ol>
-          <h6 class="font-weight-bolder text-white mb-0">Nombre de usuario</h6>
+          <h6 class="font-weight-bolder text-white mb-0"><?php echo $_SESSION['user_name'] ?></h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <ul class="navbar-nav  justify-content-end">
