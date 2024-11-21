@@ -27,7 +27,7 @@
   $servidor = 'localhost:8889';
   $usuario = 'root';
   $password = 'root';
-  $bd = 'inventario_zapateria';
+  $bd = 'inv_zapateria';
 
   // Conectar a la Base de Datos
   $conexion = new mysqli($servidor, $usuario, $password, $bd);
