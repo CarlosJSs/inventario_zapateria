@@ -18,6 +18,7 @@ if (isset($_POST['add_categoria'])) {
     $stmt->bind_param("ss", $nombre, $descripcion);
     $stmt->execute();
     $stmt->close();
+    header('Location: ../views/layout.php?page=categorias');
 }
 
 // Eliminar Categoría
@@ -30,6 +31,7 @@ if (isset($_POST['delete_categoria'])) {
     $stmt->bind_param("i", $cat_id);
     $stmt->execute();
     $stmt->close();
+    header('Location: ../views/layout.php?page=categorias');
 }
 
 // Obtener las categorías existentes
@@ -44,10 +46,12 @@ $result = $conexion->query($selectQuery);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Categorías</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../public/css/categorias.css">
 </head>
 <body>
+    <h1 class="pageTitle">Gestión de Categorías</h1>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Gestión de Categorías</h1>
+        <h1 class="text-center mb-4"></h1>
 
         <div class="row">
             <!-- Formulario para agregar nueva categoría -->
