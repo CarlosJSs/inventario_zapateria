@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Plus Jakarta Sans';
+}
+.pageTitle {
+  margin-left: 1.6em;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/**   Estilos para el formulario   */
+.formContainer {
+  width: 35vw;
+  margin-left: 5em;
+  background-color: white;
+  padding: 1.4em 1.8em;
+  border-radius: 16px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+  height: 22em;
+}
+.headCard {
+  width: 100%;
+}
+.titleCard {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #1a202c;
+}
+.descCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #90a3bf;
+  font-size: .9em;
+  margin-bottom: 1.6em;
+}
+.descInfo {
+  font-weight: 400;
+}
+.stepCard {
+  font-weight: 500;
+}
+.rowInputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.labelAndInput {
+  width: 50%;
+  margin-bottom: 1.8em;
+}
+.labelInput {
+  color: #1a202c;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: .7em;
+}
+.inputInfo {
+  width: 100%;
+  height: 3.8em;
+  background-color: #f6f7f9;
+  border-radius: 14px;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  font-weight: 500;
+  font-size: .9em;
+  border: 0px;
+}
+.inputInfo::placeholder {
+  color: #90a3bf;
+}
+.rowInputs .labelAndInput:nth-of-type(2) {
+  margin-left: 1.5em
+}
+.rowInputs .labelAndInput:nth-of-type(1) {
+  margin-right: 1.5em;
+}
+.inputDT {
+  padding-right: 2em;
+}
+select option:disabled {
+  color: gray;
+}
+.btnAdd {
+  padding: 1em 2em;
+  background-color: #344767;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  border-radius: 16px;
+  border: 0px;
+}
+.btnAdd:hover {
+  background-color: #576d94;
+}
+.btnContainer {
+  margin-right: 10%;
+  margin-top: 2em;
+}
+
+
+/**   Estilos para la tabla   */
+.tableContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.customTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.customTable thead tr {
+  background-color: #f3f4f6;
+}
+.customTable th, .customTable td {
+  padding: 1em 2em;
+  text-align: left;
+}
+.customTable th {
+  font-size: 1em;
+  color: #555;
+  text-transform: uppercase;
+}
+.customTable tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+.customTable tbody tr:last-child {
+  border-bottom: none;
+}
+.infoTable {
+  font-size: .9em;
+  font-weight: 500;
+
+}
+.btnDelete {
+  color: white;
+  font-size: .9em;
+  font-weight: 600;
+  background-color: red;
+  border-radius: 16px;
+  border: 0px;
+  padding: .6em 1.2em;
+}
