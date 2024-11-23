@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-include '../config/database.php';  // Asegúrate de que la ruta del archivo de configuración sea correcta
+include '../config/database.php';
 
 // Agregar un nuevo proveedor
 if (isset($_POST['add_proveedor'])) {
