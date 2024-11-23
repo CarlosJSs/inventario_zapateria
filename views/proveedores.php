@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-include '../config/database.php';  // Asegúrate de que la ruta del archivo de configuración sea correcta
+include '../config/database.php';
 
 // Agregar un nuevo proveedor
 if (isset($_POST['add_proveedor'])) {
@@ -16,6 +16,7 @@ if (isset($_POST['add_proveedor'])) {
     $stmt->bind_param("sss", $nombre, $telefono, $correo);
     $stmt->execute();
     $stmt->close();
+    header('Location: ../views/layout.php?page=proveedores');
 }
 
 // Eliminar un proveedor
@@ -28,6 +29,7 @@ if (isset($_POST['delete_proveedor'])) {
     $stmt->bind_param("i", $prov_id);
     $stmt->execute();
     $stmt->close();
+    header('Location: ../views/layout.php?page=proveedores');
 }
 
 // Obtener los proveedores

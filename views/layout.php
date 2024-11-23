@@ -151,15 +151,15 @@
     <?php
       // Cargar el contenido dinámico
       if (isset($_GET['page'])) {
-          $page = $_GET['page'];
-          $file = "{$page}.php";
-          if (file_exists($file)) {
-              include $file;
-          } else {
-              include "default.php";
-          }
+        $page = $_GET['page'];
+        $file = "{$page}.php";
+        if (file_exists($file)) {
+          include $file;
+        } else {
+          include "panel.php";
+        }
       } else {
-          include "default.php";
+        include "panel.php";
       }
     ?>
 
