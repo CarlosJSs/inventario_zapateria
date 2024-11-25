@@ -1,14 +1,17 @@
 <?php
 
-  $servidor = 'localhost:8889';
-  $usuario = 'root';
-  $password = 'root';
-  $bd = 'inv_zapateria';
+$host = 'localhost';  
+$port = '8889';          
+$dbname = 'inv_zapateria';  
+$username = 'root';       
+$password = 'root';       
 
-  // Conectar a la Base de Datos
-  $conexion = new mysqli($servidor, $usuario, $password, $bd);
-  if($conexion->connect_error){
-    die('Conexion fallo '.$conexion->connect_error);
-  }
+$conexion = new mysqli($host, $username, $password, $dbname, $port);
 
+if($conexion->connect_error){
+    die('Conexión fallida: ' . $conexion->connect_error);
+} else {
+    echo "Conexión exitosa";
+}
 ?>
+
