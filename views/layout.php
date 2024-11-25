@@ -118,6 +118,21 @@
   </aside>
 
   <main class="main-content position-relative border-radius-lg ">
+     <!-- Mostrar mensaje de éxito -->
+     <?php if (isset($_SESSION['mensaje'])): ?>
+        <div class="alert alert-success">
+            <?php echo $_SESSION['mensaje']; ?>
+            <?php unset($_SESSION['mensaje']); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Mostrar mensaje de error -->
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger">
+            <?php echo $_SESSION['error']; ?>
+            <?php unset($_SESSION['error']); ?>
+        </div>
+    <?php endif; ?>
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
@@ -162,6 +177,7 @@
         include "panel.php";
       }
     ?>
+    
 
   </main>
   <script src="../public/js/layout.js"></script>
