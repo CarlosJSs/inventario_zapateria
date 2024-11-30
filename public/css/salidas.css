@@ -15,6 +15,14 @@
     padding: 20px;
 }
 
+.title {
+    margin-left: 2em;
+}
+
+h3 {
+    margin-top: 0 !important;
+}
+
 .modal, .modal-table {
     background: #FFFFFF;
     box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
