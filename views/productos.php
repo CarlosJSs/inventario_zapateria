@@ -54,7 +54,7 @@ $result_categorias = $conexion->query($sql_categorias);
 <h2 class="title">Gestión de Productos</h2>
     <div class="container-flex">
         <div class="modal">
-            <h1>Agregar nuevo producto</h1>
+            <h1 class="myTitle">Agregar nuevo producto</h1>
             <form method="POST" action="" class="form">
                 <div class="form">
                     <!-- Columna 1 -->
@@ -76,7 +76,7 @@ $result_categorias = $conexion->query($sql_categorias);
 
                         <div class="input_container">
                             <label for="prod_precio" class="input_label">Precio:</label>
-                            <input type="number" name="prod_precio" id="prod_precio" class="input_field" step="0.01" required>
+                            <input type="number" name="prod_precio" id="prod_precio" class="input_field" min="0" step="0.01" required>
                         </div>
                     </div>
 
@@ -126,7 +126,7 @@ $result_categorias = $conexion->query($sql_categorias);
     <!-- Tabla de productos -->
     <div class="container-flex">
         <div class="modal-table">
-            <h2>Productos Registrados</h2>
+            <h2 class="titleTable">Productos Registrados</h2>
             <table>
                 <tr>
                     <th>ID</th>
