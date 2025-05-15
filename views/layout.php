@@ -1,5 +1,7 @@
 <?php
-  session_start();
+	if (session_status() === PHP_SESSION_NONE) {
+			session_start();
+	}
   if(!isset($_SESSION['usuario'])){
     header("Location: login.php");
     exit();
@@ -118,8 +120,8 @@
   </aside>
 
   <main class="main-content position-relative border-radius-lg ">
-     <!-- Mostrar mensaje de éxito -->
-     <?php if (isset($_SESSION['mensaje'])): ?>
+      <!-- Mostrar mensaje de éxito -->
+      <?php if (isset($_SESSION['mensaje'])): ?>
         <div class="alert alert-success">
             <?php echo $_SESSION['mensaje']; ?>
             <?php unset($_SESSION['mensaje']); ?>
@@ -168,6 +170,7 @@
       if (isset($_GET['page'])) {
         $page = $_GET['page'];
         $file = "{$page}.php";
+
         if (file_exists($file)) {
           include $file;
         } else {

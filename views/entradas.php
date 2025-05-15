@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+}
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
@@ -43,9 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Obtener datos de la tabla 'entrada'
 $sql_entradas = "SELECT e.ent_id, p.prov_nombre, e.ent_fecha, e.ent_costo, e.ent_cantidad, prod.prod_nombre
-                 FROM entrada e
-                 JOIN proveedor p ON e.ent_prov = p.prov_id
-                 JOIN producto prod ON e.ent_prod_id = prod.prod_id";
+                    FROM entrada e
+                    JOIN proveedor p ON e.ent_prov = p.prov_id
+                    JOIN producto prod ON e.ent_prod_id = prod.prod_id";
 $result_entradas = $conexion->query($sql_entradas);
 
 
