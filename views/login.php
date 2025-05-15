@@ -15,7 +15,7 @@
 
     if($admin->num_rows > 0){
       $dato = $admin->fetch_assoc();
-      // if($password === $dato['adm_contra']){ // Descomentar linea si no hay passowrds encryptadas en la BD
+      //if($password === $dato['adm_contra']){ // Descomentar linea si no hay passowrds encryptadas en la BD
       if(password_verify($password, $dato['adm_contra'])){
         $_SESSION['usuario'] = $usuario;
         $_SESSION['user_name'] = $dato['adm_nombre'];

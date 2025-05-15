@@ -1,8 +1,8 @@
 <?php
 
-  $servidor = 'localhost:8889';
+  $servidor = 'localhost:3306';
   $usuario = 'root';
-  $password = 'root';
+  $password = 'extssy55';
   $bd = 'inv_zapateria';
 
   // Conectar a la Base de Datos
